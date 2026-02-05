@@ -206,9 +206,12 @@ main{
     opacity: 0;
     display:none;
     & .descripiion{
-        line-height: 20;
-        margin: 2rem 0  15rem;
+        line-height: 3;
+        margin: 2rem 0  3rem;
         font-size: .8rem;
+    }
+    & .title{
+        font-size: 2.5rem;
     }
     & button{
         width: fit-content;
@@ -245,6 +248,93 @@ main{
     z-index: 5;
     user-select: none;
 
+
+    & .btn{
+        background-color: rgba(255, 255, 255, .5);
+        color: rgba(0, 0, 0, .7);
+        border: 2px solid rgba(0, 0, 0, .6);
+        margin: 0 0.25rem;
+        padding: 0.75rem;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+    }
+    & .btn:hover{
+        background-color: rgba(255, 255, 255, .8);
+        padding: 1rem;
+        border: 3px solid rgba(0, 0, 0, 0.89) ;
+    }
+    
+
 }
+@media (width > 650px) and (width <900px) {
+    .content{
+        & .title{
+            font-size: 1.5rem;
+        }
+        & .descripiion{
+            font-size: 1rem;
+        }
+    }
+    .sliderItem{
+        width: 150px;
+        height: 240px;
+    &:nth-child(3){
+        left:50%;
+    }
+    &:nth-child(4){
+        left:calc(50% + 170px);
+    }
+    &:nth-child(5){
+        left:calc(50% + 340px);
+    }
+    &:nth-child(6){
+        left:calc(50% + 510px);
+        opacity: 0;
+    }
+
+    }
+
+}
+@media (width < 650px) {
+    .content{
+        & .title{
+            font-size: 0.9rem;
+        }
+        & .descripiion{
+            font-size: .5rem;
+        }
+        & button{
+            font-size: .5rem;
+        }
+    }
+    .sliderItem{
+        width: 130px;
+        height: 220px;
+    &:nth-child(3){
+        left:50%;
+    }
+    &:nth-child(4){
+        left:calc(50% + 140px);
+    }
+    &:nth-child(5){
+        left:calc(50% + 280px);
+    }
+    &:nth-child(6){
+        left:calc(50% + 420px);
+        opacity: 0;
+    }
+
+    }
+    .arrow .btn{
+        padding: 0.2rem;
+
+    }
+    .arrow .btn:hover{
+        padding: 0.3rem;
+    }
+
+}
+
 
 
